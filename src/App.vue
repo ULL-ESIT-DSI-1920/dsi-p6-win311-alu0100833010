@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <win311-icon name="msdos"></win311-icon>
-    <win311-window type="cpanel"></win311-window>
+    <win311-window type="cpanel"></win311-window><br>
     <win311-window type="apps"></win311-window>
   </div>
 </template>
