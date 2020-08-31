@@ -78,19 +78,20 @@ Para ello comenzamos creando la estructura del proyecto.
    ```
   cd dsi-p6-win311-alu0100833010
   ```
+
+Automáticamente se nos crea una estructura para nuestro proyecto por lo que quedaría:
   
-* **Formateador de código: Prettier**
-  ```
-  // Configurar nuestro proyecto para Prettier
-  npm install -D prettier
-  
-  // Plugins para evitar conflictos entre Prettier y ESLint.
-  npm install -D eslint-config.prettier eslint-plugin-prettier
-  ```
-  
-  Tras esto, la estructura final del proyecto quedaría:
-  
-  ![Captura1](src/assets/captures/cap9.png)
+  ![Captura1](src/assets/captures/cap1.png)
+ 
+A diferencia de _Parcel_, para correr el servidor ejecutamos el comando:
+
+```
+npm run serve
+```
+
+Inicialmente, **VueJS** nos muestra una pantalla de bienvenida.
+
+  ![Captura2](src/assets/captures/capVue.png)
   
 ### 2. Código _HTML_.
 
