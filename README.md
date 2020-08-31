@@ -134,8 +134,22 @@ Antes de ver el código de la práctica, un componente simple de _Vue_ posee 3 s
 
 ![Captura6](src/assets/captures/cap3.png)
  
-`App.vue` es el componente principal de toda la aplicación. 
+`App.vue` es el componente principal de toda la aplicación. Como mencionamos antes, la estructura del archivo está dividida en
+`<template></template>`, `<script></script>` y `<style></style>`.
 
+En `<template></template>` se encuentra el código _HTML_ de la página. Solo debe haber un único elemento hijo, en este caso, 
+`<div id="app"></div>`. Dentro de él, encontramos las etiquetas correspondientes con el resto de componentes de la aplicación, 
+`<win311-icon>` y `<win311-window>`, en el que a ambos se les indica un prop que hace referencia a `windows.json`.
+
+![Captura7](src/assets/captures/cap4.png)
+
+Dentro `<style></style>`, se encuentra el código _CSS_ para darle estilo a toda la página.
+
+* *`windows.json`: 
+
+  ```
+  
+  ```
 ### 5. Publicación en _gh-pages_.
  
 Para publicar nuestro proyecto en **gh-pages**, ejecutamos los siguientes comandos:
