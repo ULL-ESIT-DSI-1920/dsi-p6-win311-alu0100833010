@@ -139,7 +139,8 @@ Antes de ver el código de la práctica, un componente simple de _Vue_ posee 3 s
 
 En `<template></template>` se encuentra el código _HTML_ de la página. Solo debe haber un único elemento hijo, en este caso, 
 `<div id="app"></div>`. Dentro de él, encontramos las etiquetas correspondientes con el resto de componentes de la aplicación, 
-`<win311-icon>` y `<win311-window>`, en el que a ambos se les indica un prop que hace referencia a `windows.json`.
+`<win311-icon>` y `<win311-window>`, en el que a ambos se les indica un prop que hace referencia a `windows.json`, que es un
+_json_ que lo que hace es especificar que título y que iconos va a tener cada ventana.
 
 Por otro lado, en `<script></script>`, damos nombre al componente principal e indicamos los componentes locales que tenemos.
 
@@ -147,76 +148,32 @@ Por otro lado, en `<script></script>`, damos nombre al componente principal e in
 
 Dentro `<style></style>`, se encuentra el código _CSS_ para darle estilo a toda la página.
 
-* *`windows.json`: 
+* `Win311Window.vue`:
 
-  ```
-  {                       
-    "apps": {
-        "title": "Application",
-        "icons": ["paintbrush", "calc", "write", "notepad", "clock"]
-    },
-    "cpanel": {
-        "title": "Control Panel",
-        "icons": [
-            "calendar",
-            "charmap",
-            "clipboard",
-            "colors",
-            "desktop",
-            "keyboard",
-            "cd",
-            "fonts",
-            "international",
-            "programs"
-        ]
-    },
-    "games": {
-        "title": "Games",
-        "icons": ["minesweeper", "solitaire","mshearts"]
-    }
+![Captura8](src/assets/captures/cap5.png)
 
-  }
-  ```
-  Este _json_ lo que hace es especificar que título y que iconos va a tener cada ventana.
+![Captura9](src/assets/captures/cap6.png)
+
+![Captura10](src/assets/captures/cap7.png)
+
+![Captura11](src/assets/captures/cap8.png)
+
+![Captura12](src/assets/captures/cap9.png)
+
+* `Win311Icon.vue`:
+
+![Captura13](src/assets/captures/cap10.png)
+
+![Captura14](src/assets/captures/cap11.png)
   
 ### 5. Publicación en _gh-pages_.
  
 Para publicar nuestro proyecto en **gh-pages**, ejecutamos los siguientes comandos:
-```
-$ npx parcel build src/index.html --no-minify
-$ npx parcel build src/index.html --no-source-maps --detailed-report
-$ npx parcel build src/index.html --public-url /dsi-p4-pokedex-alu0100833010/ -d build
-$ npx gh-pages -d build
-```
-![Captura11](src/assets/captures/cap11.png)
 
-Enlace:  https://ull-esit-dsi-1920.github.io/dsi-p4-pokedex-alu0100833010/
+![Captura15](src/assets/captures/cap12.png)
 
-### 6. Retos.
+![Captura16](src/assets/captures/cap13.png)
 
-#### Reto 1.
+![Captura17](src/assets/captures/cap16.png)
 
-Busca plugins de PostCSS que consideres interesantes y documentalos en el `README.md` con un enlace a su GitHub y una breve
-descripción de lo que hacen y para que podría serte útil.
-
-* **PreCSS**
-
-Al activar **PreCSS**, puedes obtener las características de un pre-procesador, de este modo puedes aprovechar de la sintaxis de
-Sass en tus hojas de estilo. Esto implica que puedes hacer uso de diversas funciones y características propias de esta sintaxis.
-
-Enlace Github: https://github.com/jonathantneal/precss
-
-* **Stylelint**
-
-**Stylelint** es un moderno corrector de código _CSS_ que revisará y validará tus archivos _CSS_. Ayuda a evitar errores comunes y
-mejorar tus hojas de estilo. También realiza una configuración personalizada al momento de realizar la validación del código.
-
-Enlace Github: https://github.com/stylelint/stylelint
-
-* **Lost Grid**
-
-**Lost Grid** es un plugin que permite trabajar con sistemas de grillas que son compatibles no sólo con _CSS_, sino también con la
-sintaxis de pre-procesadores populares como _Sass_ o _Less_. Puedes crear grillas sin invertir mucho tiempo por medio de la
-función calc().
-
-Enlace Github: https://github.com/peterramsing/lost
+Enlace:  https://ull-esit-dsi-1920.github.io/dsi-p6-win311-alu0100833010/
