@@ -84,83 +84,23 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 La estrucutura de `index.html` es la siguiente:
 
- ![Captura2](src/assets/captures/cap1.png)
+ ![Captura3](src/assets/captures/cap1.png)
  
-El código tiene un botón que será el encargado de, una vez se haga click sobre él, muestre los datos de nuestra PokeDex dentro del
-_div_ con `id="pokedex"`.
+Por defecto, **VueJS** nos crea un archivo `index.html` muy sencillo que sirve como _plantilla_. **VueJS** añade a este archivo
+los elementos que necesita que están dentro de la parte de Vue. 
 
-### 3. Código _CSS_.
+Debemos tener en cuenta el `<div id="app"></div>`, ya que es el contenedor que va a recibir toda la información proveniente de los 
+componentes de Vue. Es donde se monta toda la aplicación.
 
-* **PokeDex:**
+### 3. Código _Javascript_.
 
- ![Captura3](src/assets/captures/cap5.png)
+Utilizando **VueJS**, creamos los componentes **Win311Window** y **Win311Icon**:
+
+ ![Captura4](src/assets/captures/cap2.png)
  
-Para mostrar los elementos de nuestra **PokeDex**, se ha utilizado la propiedad `display: grid` de CSS que nos permite dividir los elementos en secciones de filas y columnas.
+* `main.js`:
 
-![Captura4](src/assets/captures/cap6.png)
-
-Por otro lado, para conseguir que los pokemons inicialmente se muestren de espaldas, y al pasar el cursor se muestren de frente y 
-a su vez aumenten de tamaño, lo hacemos con uso de código _CSS_. 
-
-La pseudo-clase `hover` nos permite realizar una determinada acción cuando el usuario pasa el cursor por encima del elemento al 
-que se le está aplicando. Como cada pokemon tiene dos imágenes que corresponden al frente y a la espalda, lo hacemos de la siguiente forma:
-
-La imagen de frente, inicialmente no se verá: 
-```
-.card .front {
-  display: none;
-}
-```
-Cuando el usuario pase el cursor por el elemento que contenga las imágenes del pokemon, hacemos que la imagen de espaldas no se muestre y que aparezca la frontal:
-
-```
-.card:hover img {
-  display: none
-}
-
-.card:hover .front {
-  display: inline-block;
-}
-```
-Por último, para que dicha imagen aumente, utilizamos la animación `resizePokemon` en la que indicamos el tamaño inicial y final
-y la añadimos en el código cuando se muestre la imagen frontal:
-```
-.card:hover .front {
-  display: inline-block;
-  animation: resizePokemon 1s infinite;
-}
-
-@keyframes resizePokemon {
-  0% { transform: scale(1)}
-  100% { transform: scale(1.2)}
-}
-```
-
-* **PostCSS:**
-
-Como hemos nombrado anteriormente, **PostCSS** son plugins de _Javascript_ que transforman el código _CSS_. 
-
-Para incorporarlo a nuestro proyecto, como hacemos uso de _Parcel_, el paquete de postcss ya está incorporado, sin embargo debemos
-instalar los paquetes que deseemos mediante **npm** utilizando los siguientes comandos:
-
-```
-$ npm install -D autoprefixer postcss-clean postcss-font-magician postcss-mixins postcss-nesting
-```
-![Captura5](src/assets/captures/cap8.png)
-
-Una vez instalados los paquetes, creamos un archivo de configuración `.postcssrc` con el siguiente contenido:
-
- ![Captura6](src/assets/captures/cap7.png)
-
-### 4. Código _Javascript_.
-
-Utilizando _Javascript_, creamos la clase **Pokemon**:
-
- ![Captura7](src/assets/captures/cap10.png)
- 
-* `index.js`:
-
- ![Captura8](src/assets/captures/cap3.png)
+ ![Captura5](src/assets/captures/cap14.png)
  
 En `index.js` creamos un array _pokemons_ que contendrá toda la información y características de los 151 pokemons. Estos datos los
 obtendremos de la API gratuita [PokeAPI](https://pokeapi.co/), por tanto, para ello realizaremos una petición desde nuestra 
