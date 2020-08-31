@@ -139,7 +139,7 @@ Antes de ver el código de la práctica, un componente simple de _Vue_ posee 3 s
 
 En `<template></template>` se encuentra el código _HTML_ de la página. Solo debe haber un único elemento hijo, en este caso, 
 `<div id="app"></div>`. Dentro de él, encontramos las etiquetas correspondientes con el resto de componentes de la aplicación, 
-`<win311-icon>` y `<win311-window>`, en el que a ambos se les indica un prop que hace referencia a `windows.json`, que es un
+`<win311-icon>` y `<win311-window>`, en el que a ambos se les indica una prop que hace referencia a `windows.json`, que es un
 _json_ que lo que hace es especificar que título y que iconos va a tener cada ventana.
 
 Por otro lado, en `<script></script>`, damos nombre al componente principal e indicamos los componentes locales que tenemos.
@@ -150,7 +150,15 @@ Dentro `<style></style>`, se encuentra el código _CSS_ para darle estilo a toda
 
 * `Win311Window.vue`:
 
+Contiene la estructura de la ventana que vamos a crear.  
+
 ![Captura8](src/assets/captures/cap5.png)
+
+En _template_, tal y como comentamos antes, solo hay un único elemento hijo, `window`. En él, seccionamos mediante el uso de
+_divs_ la estructura de nuestra ventana. 
+
+* * `header':
+  
 
 ![Captura9](src/assets/captures/cap6.png)
 
