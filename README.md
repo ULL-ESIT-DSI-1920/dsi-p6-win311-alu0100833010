@@ -157,9 +157,12 @@ Contiene la estructura de la ventana que vamos a crear.
 En _template_, tal y como comentamos antes, solo hay un único elemento hijo, `window`. En él, seccionamos mediante el uso de
 _divs_ la estructura de nuestra ventana. 
 
-* * `header':
+* * `header`: Añadimos el guión, el título del componente y la flecha.
+* * `container`: Añadimos la barra de navegación y los iconos de la ventana. En **VueJS** podemos crear componentes más complejos
+  que nos permiten renderizar variables, iterar e incluso realizar condicionales. Por tanto, hacemos uso de dicha funcionalidad
+  en la etiqueta `<win311-icon>` para generar los iconos.
+* * `footer`: Añadimos el texto.
   
-
 ![Captura9](src/assets/captures/cap6.png)
 
 ![Captura10](src/assets/captures/cap7.png)
