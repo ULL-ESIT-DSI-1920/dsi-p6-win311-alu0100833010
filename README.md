@@ -207,7 +207,7 @@ y `vue.config. js`:
 
 ![Captura16](src/assets/captures/cap13.png)
 
-Al ejecutar `deploy.sh`, ua quedaría nuestro proyecto publicado en **gh-pages**:
+Al ejecutar `deploy.sh`, ya quedaría nuestro proyecto publicado en **gh-pages**:
 
 ![Captura17](src/assets/captures/cap16.png)
 
