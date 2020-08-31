@@ -54,7 +54,7 @@ Para ello comenzamos creando la estructura del proyecto.
   cd dsi-p6-win311-alu0100833010
   ```
 
-Automáticamente se nos crea una estructura para nuestro proyecto por lo que quedaría:
+Automáticamente se nos crea una estructura del proyecto:
   
   ![Captura1](src/assets/captures/cap15.png)
  
@@ -102,24 +102,39 @@ Utilizando **VueJS**, creamos los componentes **Win311Window** y **Win311Icon**:
 
  ![Captura5](src/assets/captures/cap14.png)
  
-En `index.js` creamos un array _pokemons_ que contendrá toda la información y características de los 151 pokemons. Estos datos los
-obtendremos de la API gratuita [PokeAPI](https://pokeapi.co/), por tanto, para ello realizaremos una petición desde nuestra 
-aplicación para conseguir la información necesaria haciendo uso de promesas. 
+Sería equivalente al `index.js` que hemos utilizado en las prácticas anteriores. Contiene el núcleo de la parte de **VueJS**. En
+este archivo se importa la librería Vue y el fichero `App.vue` que corresponde con el _componente_ principal de la aplicación. 
 
-Mediante `fetch` hacemos una llamada a la API y almacenamos la respuesta en un _json()_. Dicho _json_ lo almacenamos en una
-constante que posteriormente le pasaremos al objeto instanciado `pokemon` para obtener detalladamente la información requerida y 
-que almacenaremos en el array _pokemons_.
+```
+new Vue({
+  render: h => h(App)
+}).$mount('#app')
+```
+Se crea una instancia de Vue que es la que utilizará la aplicación y le indica donde ha de montarla, en este caso, en el
+elemento _HTML_ con el mismo nombre que vimos en `index.html`. 
 
- ![Captura9](src/assets/captures/cap4.png)
+### 3. Componentes.
+
+Una de las características más importantes de Vue es el trabajo con componentes. Un componente de _Vue_ es un elemento que 
+encapsula código reutilizable. Dentro de un componente podemos encontrar etiquetas _HTML_, estilos de _CSS_ y código _Javascript_.
+
+Antes de ver el código de la práctica, un componente simple de _Vue_ posee 3 secciones: _HTML_, _CSS_ y _Javascript_:
+```
+<template>
+  <h1 class="text"> Plantilla de Vue </h1>
+</template>
+
+<script>
+</script>
+
+<style>
+</style>
+```
+* `App.vue`:
+
+![Captura6](src/assets/captures/cap3.png)
  
-Por último, creamos la función `showPokedex` que se encargará de mostrar los datos de los pokemons.
-
-* `Pokemon.js`:
-
-![Captura10](src/assets/captures/cap2.png)
- 
-En `Pokemon.js` se analizan los datos que recibe el objeto `pokemon` de `index.js` y recogemos los que deseamos. Se ha añadido 
-el tipo de pokemon como extra.
+`App.vue` es el componente principal de toda la aplicación. 
 
 ### 5. Publicación en _gh-pages_.
  
