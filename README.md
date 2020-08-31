@@ -113,7 +113,7 @@ new Vue({
 Se crea una instancia de Vue que es la que utilizará la aplicación y le indica donde ha de montarla, en este caso, en el
 elemento _HTML_ con el mismo nombre que vimos en `index.html`. 
 
-### 3. Componentes.
+### 4. Componentes.
 
 Una de las características más importantes de Vue es el trabajo con componentes. Un componente de _Vue_ es un elemento que 
 encapsula código reutilizable. Dentro de un componente podemos encontrar etiquetas _HTML_, estilos de _CSS_ y código _Javascript_.
@@ -207,3 +207,35 @@ Para publicar nuestro proyecto en **gh-pages**, ejecutamos los siguientes comand
 ![Captura17](src/assets/captures/cap16.png)
 
 Enlace:  https://ull-esit-dsi-1920.github.io/dsi-p6-win311-alu0100833010/
+
+### 6. Retos.
+
+#### Reto 1.
+
+Método: 
+```
+bg_blue: function(event) {
+            if (this.aux === 0) {
+                this.aux++;
+                this.color = "blue";
+            } else {
+                this.color = "none";
+                this.aux = 0;
+            }
+```
+Llamada:
+```
+<div class="icon" @click="bg_blue()" @dblclick="alert()">
+```
+#### Reto 3. 
+
+Método:
+```
+alert: function(event) {
+            alert("Open " + this.name);
+        }
+```
+Llamada:
+```
+<div class="icon" @click="bg_blue()" @dblclick="alert()">
+```
