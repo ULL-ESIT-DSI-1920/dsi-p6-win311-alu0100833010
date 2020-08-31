@@ -35,7 +35,15 @@ _Práctica 6.  VueJS._
 **Vue** está diseñado desde cero para ser utilizado incrementalmente. La librería central está enfocada solo en la capa de
 visualización, y es fácil de utilizar e integrar con otras librerías o proyectos existentes. Por otro lado, Vue también es
 perfectamente capaz de impulsar sofisticadas _Single-Page Applications_ cuando se utiliza en combinación con herramientas
-modernas y librerías de apoyo.
+modernas y librerías de apoyo. 
+
+* **Vue-CLI**:
+
+**Vue-CLI** (interfaz de línea de comandos de _Vue_) es una herramienta creada por **VueJS** que facilita el rápido desarrollo de
+las aplicaciones de _Vue_. Nos permite comenzar un proyecto de inmediato sin tener que preocuparnos de diferentes herramientas de
+compilación.
+
+* **Objetivo**:
 
 En esta práctica, vamos a utilizar VueJS y su sistema de componentes para crear una imitación visual del sistema de ventanas
 del entorno gráfico de Windows 3.11.
@@ -48,43 +56,29 @@ Para ello comenzamos creando la estructura del proyecto.
 
 #### Pasos para crear el proyecto.
 
-* **Scaffolding** 
+* **Instalación de Vue-CLI** 
 
-  Creamos las carpetas:
   ```
-  mkdir -p nombre-repo/src/{css,js,assets}
+  // Instalamos vue en nuestro sistema
+  npm install -g @vue-cli
+  ```
+  Comprobamos que se ha instalado correctamente:
+  ```
+  vue --version
+  ```
+  
+* **VueJS**
+
+  Creamos el repo usando el comando `vue`:
+  
+  ```
+  vue create dsi-p6-win311-alu0100833010
   ```
   Nos situamos en el repo:
+   ```
+  cd dsi-p6-win311-alu0100833010
   ```
-  cd nombre-repo
-  ```
-* **Git**
-
-  Inicializamos el repo con git:
-  ```
-  git init
-  git remote add origin...
-  touch .gitignore
-  touch README.md
-  ```
-* **NPM**
-
-  Inicializamos el repo con npm:
-  ```
-  npm init -y
-  ```
-* **Instalación de ParcelJS**
-  ```
-  // Instalamos parcel en nuestro proyecto.
-  npm install -D parcel-bundler
   
-  // Punto de entrada para parcel.
-  npx parcel src/index.html
-  ```
-* **Linters**
-  ```
-  npm install -D eslint
-  ```
 * **Formateador de código: Prettier**
   ```
   // Configurar nuestro proyecto para Prettier
