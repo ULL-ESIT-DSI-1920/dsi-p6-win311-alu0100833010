@@ -141,6 +141,8 @@ En `<template></template>` se encuentra el código _HTML_ de la página. Solo de
 `<div id="app"></div>`. Dentro de él, encontramos las etiquetas correspondientes con el resto de componentes de la aplicación, 
 `<win311-icon>` y `<win311-window>`, en el que a ambos se les indica un prop que hace referencia a `windows.json`.
 
+Por otro lado, en `<script></script>`, damos nombre al componente principal e indicamos los componentes locales que tenemos.
+
 ![Captura7](src/assets/captures/cap4.png)
 
 Dentro `<style></style>`, se encuentra el código _CSS_ para darle estilo a toda la página.
@@ -148,8 +150,35 @@ Dentro `<style></style>`, se encuentra el código _CSS_ para darle estilo a toda
 * *`windows.json`: 
 
   ```
-  
+  {                       
+    "apps": {
+        "title": "Application",
+        "icons": ["paintbrush", "calc", "write", "notepad", "clock"]
+    },
+    "cpanel": {
+        "title": "Control Panel",
+        "icons": [
+            "calendar",
+            "charmap",
+            "clipboard",
+            "colors",
+            "desktop",
+            "keyboard",
+            "cd",
+            "fonts",
+            "international",
+            "programs"
+        ]
+    },
+    "games": {
+        "title": "Games",
+        "icons": ["minesweeper", "solitaire","mshearts"]
+    }
+
+  }
   ```
+  Este _json_ lo que hace es especificar que título y que iconos va a tener cada ventana.
+  
 ### 5. Publicación en _gh-pages_.
  
 Para publicar nuestro proyecto en **gh-pages**, ejecutamos los siguientes comandos:
