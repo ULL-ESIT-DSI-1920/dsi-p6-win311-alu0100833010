@@ -198,11 +198,16 @@ En este componente no definimos ningún estilo.
   
 ### 5. Publicación en _gh-pages_.
  
-Para publicar nuestro proyecto en **gh-pages**, ejecutamos los siguientes comandos:
+Para publicar nuestro proyecto en **gh-pages**, como ya no estamos haciendo uso de _Parcel_, cambia la forma. Por tanto, para
+hacerlo con _Vue-cli_ creamos el script `deploy.sh`:
 
 ![Captura15](src/assets/captures/cap12.png)
 
+y `vue.config. js`:
+
 ![Captura16](src/assets/captures/cap13.png)
+
+Al ejecutar `deploy.sh`, ua quedaría nuestro proyecto publicado en **gh-pages**:
 
 ![Captura17](src/assets/captures/cap16.png)
 
