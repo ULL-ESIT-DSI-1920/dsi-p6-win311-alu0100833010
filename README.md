@@ -157,25 +157,44 @@ Contiene la estructura de la ventana que vamos a crear.
 En _template_, tal y como comentamos antes, solo hay un único elemento hijo, `window`. En él, seccionamos mediante el uso de
 _divs_ la estructura de nuestra ventana. 
 
-* * `header`: Añadimos el guión, el título del componente y la flecha.
+* * `header`: Añadimos el guión, el título de la ventana y la flecha.
+
 * * `container`: Añadimos la barra de navegación y los iconos de la ventana. En **VueJS** podemos crear componentes más complejos
   que nos permiten renderizar variables, iterar e incluso realizar condicionales. Por tanto, hacemos uso de dicha funcionalidad
-  en la etiqueta `<win311-icon>` para generar los iconos.
+  en la etiqueta `<win311-icon>` para generar los iconos y asignar dicha "zona" para ellos.
+  
 * * `footer`: Añadimos el texto.
   
 ![Captura9](src/assets/captures/cap6.png)
 
+En _script_ indicamos el componente local `Win311Icon`. También, definimos las `props` y `data` que contiene las variables.  
+
 ![Captura10](src/assets/captures/cap7.png)
 
-![Captura11](src/assets/captures/cap8.png)
-
-![Captura12](src/assets/captures/cap9.png)
+Y en _style_ definimos el estilo para el componente. Debería haber hecho uso de la propiedad `scoped` para asegurar que dichos 
+estilos _CSS_ se apliquen únicamente sobre el componente actual.
 
 * `Win311Icon.vue`:
 
+Componente donde se generan los iconos.
+
 ![Captura13](src/assets/captures/cap10.png)
 
+A través del _div_ que contiene a la clase `icon`, llamamos a los métodos `bg_blue` al hacer click y `alert` al hacer doble click.
+En `<img>`, mostramos las imágenes de los iconos que se encuentran en _/assets/icons/nombre-icono.png_ y añadimos el nombre y el
+color de fondo del mismo.
+
 ![Captura14](src/assets/captures/cap11.png)
+
+Declaramos las `props` y en `data` declaramos las variables, exactamente igual que en el componente _Win311Window_. Creamos las 
+funciones `bg_blue()` y `alert()`.
+
+  * * `bg_blue`: Cuando el usuario interactúe con el icono y haga click sobre el, ponemos el fondo del nombre del icono en azul.
+  Con la variable aux controlamos el número de clicks del usuario.
+  
+  * * `alert`: Cuando el usuario haga doble click sobre el icono, lanza una alerta con `"Open " + nombre del icono`.
+  
+En este componente no definimos ningún estilo.
   
 ### 5. Publicación en _gh-pages_.
  
