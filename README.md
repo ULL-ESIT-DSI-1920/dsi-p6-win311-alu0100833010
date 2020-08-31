@@ -56,7 +56,7 @@ Para ello comenzamos creando la estructura del proyecto.
 
 Automáticamente se nos crea una estructura para nuestro proyecto por lo que quedaría:
   
-  ![Captura1](src/assets/captures/cap1.png)
+  ![Captura1](src/assets/captures/cap15.png)
  
 A diferencia de _Parcel_, para correr el servidor ejecutamos el comando:
 
